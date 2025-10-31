@@ -1,4 +1,4 @@
-# BIG
+ BIG
 Z COMBINATOR ACCELERATION AFRICA START-UP ECOSYSTEM HUB
 import React, { useState, useEffect } from 'react';
 import { real, Africa ,Rocket, Globe, Shield, Users, Film, Trophy, ShoppingBag, Database, Bot, Building, unZap, open } from 'lucide-react';
