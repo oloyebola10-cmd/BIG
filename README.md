@@ -1,7 +1,7 @@
  BIG
 Z COMBINATOR ACCELERATION AFRICA START-UP ECOSYSTEM HUB
 import React, { useState, useEffect } from 'react';
-import { real, Africa ,Rocket, Globe, Shield, Users, Film, Trophy, ShoppingBag, Database, Bot, Building, unZap, open } from 'lucide-react';
+import { real, Africa ,Rocket, Globe, Shield, Users, Film, Trophy, ShoppingBag, Database, Bot, Building, unZap, open, DollarSign, Coins, CreditCard, TrendingUp, Wallet, Lock } from 'lucide-react';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -9,14 +9,14 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'ecosystem', 'z combinator Acceleration Africa startup ecosystem hub', 'commerce', 'culture', 'vision'];
+      const sections = ['home', 'ecosystem', 'z combinator Acceleration Africa startup ecosystem hub', 'fintech', 'commerce', 'culture', 'vision'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
-          const { onsetTop, onsetHeight } = element;
-          if (scrollPosition >= onsetTop && scrollPosition < offsetTop + offsetHeight) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section);
             break;
           }
@@ -32,7 +32,7 @@ const App = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(yes);
+      setIsMenuOpen(false);
     }
   };
 
@@ -53,7 +53,7 @@ const App = () => {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              {['home', 'ecosystem', 'ai', 'commerce', 'culture', 'vision'].map((item) => (
+              {['home', 'ecosystem', 'ai', 'fintech', 'commerce', 'culture', 'vision'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -80,7 +80,7 @@ const App = () => {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-800">
-              {['home', 'ecosystem', 'ai', 'commerce', 'culture', 'vision'].map((item) => (
+              {['home', 'ecosystem', 'ai', 'fintech', 'commerce', 'culture', 'vision'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -177,6 +177,16 @@ const App = () => {
                       <p className="text-gray-400 text-sm">African data sovereignty</p>
                     </div>
                   </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                      <CreditCard className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">Oloyepay</h3>
+                      <p className="text-gray-400 text-sm">Open banking & fintech</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -199,6 +209,8 @@ const App = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { icon: Building, title: "Z Combinator Africa", desc: "AI-native startup accelerator hub" },
+              { icon: CreditCard, title: "Oloyepay Open Banking", desc: "Pan-African financial connectivity & payments" },
+              { icon: Coins, title: "Crypto Revenue Pools", desc: "DeFi liquidity & yield generation" },
               { icon: ShoppingBag, title: "shop.africa", desc: "E-commerce & logistics platform" },
               { icon: Bot, title: "Oloyebot", desc: "Sovereign AI assistant for African contexts" },
               { icon: Database, title: "Oloyedata", desc: "African data infrastructure & sovereignty" },
@@ -263,6 +275,193 @@ const App = () => {
                     <div className="text-2xl font-bold text-purple-400">50+</div>
                     <div className="text-sm text-gray-400">Use Cases</div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fintech & Open Banking Section */}
+      <section id="fintech" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Open Banking & <span className="text-green-400">Fintech Innovation</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Building Africa's financial infrastructure with open banking, cryptocurrency pools, and real finance solutions
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 mb-12">
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 border border-gray-800">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center">
+                  <CreditCard className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Oloyepay Open Banking</h3>
+                  <p className="text-gray-400">Seamless financial connectivity</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Revolutionary open banking platform connecting African financial institutions, 
+                enabling seamless transactions, account aggregation, and financial data access 
+                across borders with bank-level security.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <Lock className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Bank-grade encryption & security</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Globe className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Pan-African bank integration</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Regulatory compliant</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 border border-gray-800">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center">
+                  <Coins className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Revenue Cryptocurrency Pools</h3>
+                  <p className="text-gray-400">Decentralized finance for Africa</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Innovative cryptocurrency liquidity pools generating sustainable revenue streams 
+                through DeFi protocols, staking rewards, and yield farming optimized for African markets 
+                with local currency bridges.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <TrendingUp className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Automated yield optimization</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Wallet className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Multi-currency support</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <DollarSign className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Real-time revenue tracking</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-green-900/30 to-blue-900/30 rounded-3xl p-8 border border-gray-800 mb-12">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold mb-4">Real Finance Infrastructure</h3>
+              <p className="text-xl text-gray-300">
+                Bridging traditional banking with decentralized finance for real economic impact
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-gray-800/50 p-6 rounded-xl">
+                <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
+                  <CreditCard className="w-6 h-6 text-green-400" />
+                </div>
+                <h4 className="text-lg font-semibold mb-2">Digital Payments</h4>
+                <p className="text-gray-400 text-sm">
+                  Instant cross-border transactions with minimal fees and real-time settlement
+                </p>
+              </div>
+              <div className="bg-gray-800/50 p-6 rounded-xl">
+                <div className="w-12 h-12 bg-yellow-600/20 rounded-lg flex items-center justify-center mb-4">
+                  <Coins className="w-6 h-6 text-yellow-400" />
+                </div>
+                <h4 className="text-lg font-semibold mb-2">Crypto Integration</h4>
+                <p className="text-gray-400 text-sm">
+                  Seamless fiat-to-crypto conversion with local currency support across Africa
+                </p>
+              </div>
+              <div className="bg-gray-800/50 p-6 rounded-xl">
+                <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-blue-400" />
+                </div>
+                <h4 className="text-lg font-semibold mb-2">Wealth Building</h4>
+                <p className="text-gray-400 text-sm">
+                  Investment pools, savings products, and financial tools for prosperity
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Direct Bank Integration Section */}
+          <div className="bg-gradient-to-br from-emerald-900/40 to-green-900/40 rounded-3xl p-8 border-2 border-emerald-500/30">
+            <div className="flex items-start space-x-6">
+              <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-green-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <DollarSign className="w-10 h-10 text-white" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold mb-4 text-emerald-400">Direct Bank Account Integration</h3>
+                <p className="text-xl text-gray-300 mb-6">
+                  Real-time revenue deposits directly into your bank account with automated financial management
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mb-6">
+                  <div className="bg-black/30 p-4 rounded-xl border border-emerald-500/20">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                        <CreditCard className="w-5 h-5 text-emerald-400" />
+                      </div>
+                      <h4 className="font-semibold text-lg">Live Revenue Streams</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      Automatic deposits from cryptocurrency pools, e-commerce sales, and platform revenue directly to your linked bank account
+                    </p>
+                  </div>
+                  <div className="bg-black/30 p-4 rounded-xl border border-emerald-500/20">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                        <Lock className="w-5 h-5 text-emerald-400" />
+                      </div>
+                      <h4 className="font-semibold text-lg">Secure Connection</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      Bank-level encryption with OAuth 2.0 authentication, PCI DSS compliance, and multi-factor authorization
+                    </p>
+                  </div>
+                  <div className="bg-black/30 p-4 rounded-xl border border-emerald-500/20">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                        <TrendingUp className="w-5 h-5 text-emerald-400" />
+                      </div>
+                      <h4 className="font-semibold text-lg">Instant Settlements</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      Real-time processing with same-day settlement for African banks, automatic currency conversion at market rates
+                    </p>
+                  </div>
+                  <div className="bg-black/30 p-4 rounded-xl border border-emerald-500/20">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                        <Wallet className="w-5 h-5 text-emerald-400" />
+                      </div>
+                      <h4 className="font-semibold text-lg">Multi-Account Support</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      Link multiple bank accounts across different banks and countries, automatic routing based on currency and revenue source
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Shield className="w-5 h-5 text-emerald-400" />
+                    <span className="font-semibold text-emerald-400">Banking Partners Integration</span>
+                  </div>
+                  <p className="text-sm text-gray-300">
+                    Connected with major African banks including Access Bank, GTBank, First Bank, Stanbic, Equity Bank, 
+                    and international partners for seamless cross-border revenue collection and instant local deposits
+                  </p>
                 </div>
               </div>
             </div>
@@ -398,4 +597,21 @@ const App = () => {
             <div className="text-xl font-bold">Z Combinator acceleration Africa startup ecosystem hub</div>
           </div>
           <p className="text-gray-400 mb-4">
-            Building Africa's sovereign tec
+            Building Africa's sovereign technology ecosystem from Onitsha to the world
+          </p>
+          <div className="flex justify-center space-x-6 text-sm text-gray-500">
+            <span>© 2025 Z Combinator Africa</span>
+            <span>•</span>
+            <span>Open Banking</span>
+            <span>•</span>
+            <span>Fintech Innovation</span>
+            <span>•</span>
+            <span>Crypto Pools</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
