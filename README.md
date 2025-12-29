@@ -358,7 +358,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-green-900/30 to-blue-900/30 rounded-3xl p-8 border border-gray-800">
+          <div className="bg-gradient-to-r from-green-900/30 to-blue-900/30 rounded-3xl p-8 border border-gray-800 mb-12">
             <div className="text-center mb-8">
               <h3 className="text-3xl font-bold mb-4">Real Finance Infrastructure</h3>
               <p className="text-xl text-gray-300">
@@ -392,6 +392,77 @@ const App = () => {
                 <p className="text-gray-400 text-sm">
                   Investment pools, savings products, and financial tools for prosperity
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Direct Bank Integration Section */}
+          <div className="bg-gradient-to-br from-emerald-900/40 to-green-900/40 rounded-3xl p-8 border-2 border-emerald-500/30">
+            <div className="flex items-start space-x-6">
+              <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-green-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <DollarSign className="w-10 h-10 text-white" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold mb-4 text-emerald-400">Direct Bank Account Integration</h3>
+                <p className="text-xl text-gray-300 mb-6">
+                  Real-time revenue deposits directly into your bank account with automated financial management
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mb-6">
+                  <div className="bg-black/30 p-4 rounded-xl border border-emerald-500/20">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                        <CreditCard className="w-5 h-5 text-emerald-400" />
+                      </div>
+                      <h4 className="font-semibold text-lg">Live Revenue Streams</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      Automatic deposits from cryptocurrency pools, e-commerce sales, and platform revenue directly to your linked bank account
+                    </p>
+                  </div>
+                  <div className="bg-black/30 p-4 rounded-xl border border-emerald-500/20">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                        <Lock className="w-5 h-5 text-emerald-400" />
+                      </div>
+                      <h4 className="font-semibold text-lg">Secure Connection</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      Bank-level encryption with OAuth 2.0 authentication, PCI DSS compliance, and multi-factor authorization
+                    </p>
+                  </div>
+                  <div className="bg-black/30 p-4 rounded-xl border border-emerald-500/20">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                        <TrendingUp className="w-5 h-5 text-emerald-400" />
+                      </div>
+                      <h4 className="font-semibold text-lg">Instant Settlements</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      Real-time processing with same-day settlement for African banks, automatic currency conversion at market rates
+                    </p>
+                  </div>
+                  <div className="bg-black/30 p-4 rounded-xl border border-emerald-500/20">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                        <Wallet className="w-5 h-5 text-emerald-400" />
+                      </div>
+                      <h4 className="font-semibold text-lg">Multi-Account Support</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      Link multiple bank accounts across different banks and countries, automatic routing based on currency and revenue source
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Shield className="w-5 h-5 text-emerald-400" />
+                    <span className="font-semibold text-emerald-400">Banking Partners Integration</span>
+                  </div>
+                  <p className="text-sm text-gray-300">
+                    Connected with major African banks including Access Bank, GTBank, First Bank, Stanbic, Equity Bank, 
+                    and international partners for seamless cross-border revenue collection and instant local deposits
+                  </p>
+                </div>
               </div>
             </div>
           </div>
