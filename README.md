@@ -15,8 +15,8 @@ const App = () => {
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
-          const { onsetTop, onsetHeight } = element;
-          if (scrollPosition >= onsetTop && scrollPosition < offsetTop + offsetHeight) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section);
             break;
           }
@@ -32,7 +32,7 @@ const App = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(yes);
+      setIsMenuOpen(false);
     }
   };
 
